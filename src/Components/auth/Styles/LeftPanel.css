@@ -1,0 +1,197 @@
+/* ── Panel layout ─────────────────────────── */
+.left-panel {
+  flex: 0 0 50%;
+  background: var(--color-black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 36px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* ── Decorative circles ───────────────────── */
+.left-panel-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.left-panel-circle--top-right {
+  top: -80px;
+  right: -56px;
+  width: 280px;
+  height: 283px;
+  background: var(--color-dark-yellow);
+  opacity: 0.6;
+}
+
+.left-panel-circle--middle-left {
+  top: 178px;
+  left: -86px;
+  width: 490px;
+  height: 440px;
+  background: #01C67E59;
+}
+
+.left-panel-circle--bottom-right {
+  bottom: -60px;
+  right: -70px;
+  width: 200px;
+  height: 200px;
+  background: var(--color-olive);
+  opacity: 0.5;
+}
+
+/* ── Logo ─────────────────────────────────── */
+.left-panel-logo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.left-panel-logo-text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 4px;
+  align-self: center;
+}
+
+/* ── Content block ────────────────────────── */
+.left-panel-content {
+  position: relative;
+  z-index: 1;
+}
+
+.left-panel-heading {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 0 0 12px;
+  line-height: 1.15;
+  font-family: 'Georgia', serif;
+}
+
+.left-panel-subheading {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 93px;
+  font-family: 'Inter', sans-serif;
+}
+
+.left-panel-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Feature bullet ───────────────────────── */
+.feature-bullet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-bullet-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* First bullet → green */
+.left-panel-bullets .feature-bullet:nth-child(1) .feature-bullet-icon {
+  background: var(--color-green);
+}
+
+/* Second bullet → yellow */
+.left-panel-bullets .feature-bullet:nth-child(2) .feature-bullet-icon {
+  background: #fed500;
+}
+
+.feature-bullet-text {
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* ── Footer ───────────────────────────────── */
+.left-panel-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.left-panel-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* ── Responsive: Tablet & Mobile ─────────── */
+.left-panel-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.left-panel-copyright {
+  font-size: 15px;
+  color: #ffffff;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* ── Responsive: Tablet & Mobile ─────────── */
+@media (max-width: 768px) {
+  .left-panel {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    padding: 24px 24px 32px;
+  }
+
+  .left-panel-content {
+    margin: 24px 0 20px;
+  }
+
+  .left-panel-heading {
+    font-size: 30px;
+  }
+
+  .left-panel-footer {
+    color: #ffffff;
+    /* white text */
+    background: var(--color-black);
+    /* keep dark background if needed */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-panel-footer {
+    position: fixed;
+    /* stick to bottom of viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #e5e7eb;
+    /* white background */
+    /* color: #000000; */
+    color: black;
+    /* black text */
+    font-size: 14px;
+    /* restore readable text */
+    text-align: center;
+    /* center the text */
+    padding: 8px 0;
+    /* some breathing room */
+    z-index: 10;
+  }
+
+  .left-panel-copyright{
+    color: black;
+  }
+}
