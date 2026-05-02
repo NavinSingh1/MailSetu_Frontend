@@ -1,0 +1,15 @@
+/* ── Auth Page Layout ─────────────────────── */
+/* Shared by both SignUp and Login pages       */
+
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* ── Responsive: Tablet & Mobile ─────────── */
+@media (max-width: 768px) {
+  .auth-page {
+    flex-direction: column;
+  }
+}

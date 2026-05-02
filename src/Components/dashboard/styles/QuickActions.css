@@ -1,0 +1,92 @@
+/* ─────────────────────────────────────────────
+   QuickActions.css
+   Located at: src/Components/dashboard/styles/QuickActions.css
+───────────────────────────────────────────── */
+
+/* ── Dark card ────────────────────────────── */
+.card--dark {
+    background: #0a0a0a;
+    border-color: #0a0a0a;
+}
+
+/* ── Card wrapper — relative for ellipses ─── */
+.quick-actions-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+/* ── Ellipse images ───────────────────────── */
+.qa-ellipse {
+    position: absolute;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+/* Yellow ellipse — top right (Figma) */
+.qa-ellipse--tr {
+    width: 199px;
+    height: 163px;
+    top: -69px;
+    right: -67px;
+    opacity: 0.85;
+    border-radius: 29%;
+}
+
+/* Green ellipse — bottom left (Figma) */
+.qa-ellipse--bl {
+    width: 185px;
+    height: 120px;
+    bottom: -31px;
+    left: -60px;
+    opacity: 0.7;
+    border-radius: 50% 50% 0 50%;
+}
+
+/* ── Content sits above ellipses ──────────── */
+.qa-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ── Title ────────────────────────────────── */
+.quick-actions-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 6px 0 4px;
+    line-height: 1.2;
+}
+
+/* ── Message ──────────────────────────────── */
+.quick-actions-msg {
+    font-size: 13px;
+    color: #D9D9D9;
+    font-family: 'Inter', sans-serif;
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+/* ── CTA Button — white outlined ─────────── */
+/* Figma shows white background button on dark card */
+.quick-actions-btn {
+    background: #ffffff;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+}
+
+.quick-actions-btn:hover {
+    opacity: 0.88;
+}

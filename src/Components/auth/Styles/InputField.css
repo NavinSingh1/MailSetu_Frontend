@@ -1,0 +1,152 @@
+/* ─────────────────────────────────────────────
+   InputField.css
+   Located at: src/Components/MailSetuSignUp/Styles/InputField.css
+───────────────────────────────────────────── */
+
+/* ── Wrapper ──────────────────────────────── */
+.input-field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+/* ── Label ────────────────────────────────── */
+.input-label {
+  font-size: 13px;
+  color: var(--color-gray);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ── Input container ──────────────────────── */
+.input-inner {
+  position: relative;
+  width: 100%;
+}
+
+/* ── Input box ────────────────────────────── */
+.input-box {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 8px;
+  padding: 0 44px 0 14px;
+  font-size: 14px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: var(--color-black);
+  background: var(--color-white);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+
+  /* Prevent zoom on focus in iOS Safari */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input-box::placeholder {
+  color: var(--color-text-muted, #9ca3af);
+  font-size: 14px;
+}
+
+/* ── Focus state ──────────────────────────── */
+.input-box--focus {
+  border-color: var(--color-green);
+}
+
+/* ── Error state ──────────────────────────── */
+.input-box--error {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+/* ── Icon container ───────────────────────── */
+.input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: default;
+  color: var(--color-text-muted, #9ca3af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* ── Clickable icon (password toggle) ─────── */
+.input-icon--clickable {
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.input-icon--clickable:hover {
+  background: var(--color-light-gray);
+}
+
+/* ── Icon image inside input ──────────────── */
+.input-icon-image {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ─────────────────────────────────────────────
+   TABLET  (769px – 1024px)
+───────────────────────────────────────────── */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .input-box {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE  (≤ 768px)
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .input-box {
+    height: 48px;        /* slightly taller — easier to tap */
+    font-size: 16px;     /* prevents iOS zoom on focus */
+    border-radius: 10px;
+    padding: 0 46px 0 14px;
+  }
+
+  .input-box::placeholder {
+    font-size: 15px;
+  }
+
+  .input-label {
+    font-size: 13px;
+  }
+
+  .input-icon {
+    right: 14px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   SMALL MOBILE  (≤ 400px)
+───────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .input-box {
+    height: 46px;
+    font-size: 15px;
+    padding: 0 42px 0 12px;
+  }
+
+  .input-label {
+    font-size: 12px;
+  }
+
+  .input-icon {
+    right: 12px;
+  }
+}
