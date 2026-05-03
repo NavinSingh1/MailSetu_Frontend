@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 118px;
   padding: 28px 15px;
   overflow: hidden;
   min-height: 100vh;
@@ -39,7 +40,7 @@
 }
 
 .left-panel-circle--middle-left {
-  top: 123px;
+  top: 100px;
   left: -89px;
   width: 547px;
   height: 548px;
@@ -62,6 +63,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  transform: translateY(-40px);
 }
 
 .logo {
@@ -177,7 +179,8 @@
   }
 
   .left-panel {
-    flex: 0 0 42%;
+    flex: 0 0 50%;
+    width: 50%;
     padding: 24px 50px;
   }
 
@@ -292,7 +295,8 @@
 ───────────────────────────────────────────── */
 @media (min-width: 900px) and (max-width: 1440px) {
   .left-panel {
-    flex: 0 0 42%;
+    flex: 0 0 50%;
+    width: 50%;
     padding: 50px 0px 300px 0px;
   }
 

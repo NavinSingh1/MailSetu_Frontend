@@ -3,7 +3,11 @@
 
 .auth-page {
   display: flex;
-  min-height: 100vh;
+  gap: 0;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
   font-family: 'Trebuchet MS', sans-serif;
 }
 

@@ -5,14 +5,15 @@
 
 /* ── Layout wrapper ───────────────────────── */
 .signup-form-wrap {
-  flex: 1;
+  flex: 0 0 50%;
+  width: 50%;
   background: #fff;
   display: grid;
   place-items: center;           /* centers both axes */
   padding: clamp(24px, 5vh, 48px) clamp(20px, 4vw, 32px);
   box-sizing: border-box;
-  overflow-y: auto;
-  min-height: 100vh;
+  overflow: visible;
+  min-height: 100%;
 }
 
 /* ── Inner card ───────────────────────────── */
@@ -134,6 +135,7 @@
 ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .signup-form-wrap {
+    width: 100%;
     min-height: unset;
     padding: clamp(24px, 5vw, 32px) clamp(16px, 5vw, 24px) clamp(32px, 6vw, 48px);
     place-items: start center;    /* align to top on mobile */

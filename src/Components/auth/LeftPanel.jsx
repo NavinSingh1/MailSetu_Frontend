@@ -27,6 +27,7 @@ function LeftPanel({ mode = "signup" }) {
           <FeatureBullet text="AI powered partner suggestions" />
         </div>
       </div>
+
       <div className="left-panel-footer footer-section">
         <span className="left-panel-copyright">© 2026 MailSetu</span>
       </div>
