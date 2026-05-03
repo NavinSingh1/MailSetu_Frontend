@@ -135,10 +135,12 @@
 ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .signup-form-wrap {
-    width: 100%;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    height: auto !important;
+    padding: 28px 20px;
     min-height: unset;
-    padding: clamp(24px, 5vw, 32px) clamp(16px, 5vw, 24px) clamp(32px, 6vw, 48px);
-    place-items: start center;    /* align to top on mobile */
+    place-items: start center;
   }
 
   .signup-form-inner {
@@ -186,5 +188,28 @@
 
   .signup-fields {
     gap: 10px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   LARGE SCREENS / TV OVERRIDES (≥ 1920px)
+───────────────────────────────────────────── */
+@media (min-width: 1920px) {
+  .signup-form-wrap {
+    padding: 60px 40px;
+  }
+
+  .signup-title {
+    font-size: 32px;
+  }
+
+  .signup-subtitle {
+    font-size: 16px;
+  }
+
+  .signup-submit-btn {
+    width: 60%;
+    height: 56px;
+    font-size: 18px;
   }
 }

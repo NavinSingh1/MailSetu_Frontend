@@ -126,8 +126,19 @@
 
 /* ── Responsive: Tablet ───────────────────── */
 @media (max-width: 768px) {
+  .auth-page {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+  }
+
   .signup-form-wrap {
-    padding: 36px 24px;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    height: auto !important;
+    padding: 28px 20px;
     justify-content: flex-start;
   }
   .signup-submit-btn {
