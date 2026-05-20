@@ -1,9 +1,12 @@
 // ─────────────────────────────────────────────
 // src/mocks/browser.js
-// MSW Browser Worker Setup
+// MSW Browser Worker — combines all handlers
 // ─────────────────────────────────────────────
 import { setupWorker } from "msw/browser";
-import { handlers } from "./handlers";
+import { handlers }        from "./handlers";
+import { profileHandlers } from "./profileHandlers";
 
-// Create the worker with all handlers
-export const worker = setupWorker(...handlers);
+// Combine all handlers:
+//   handlers        → auth + dashboard
+//   profileHandlers → profile & settings page
+export const worker = setupWorker(...handlers, ...profileHandlers);

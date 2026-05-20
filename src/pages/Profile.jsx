@@ -1,22 +1,29 @@
-import { useEffect } from "react";
-import { apiGetAccount, apiGetPrivacy, apiGetPayment } from "../services/api";
+// ─────────────────────────────────────────────
+// src/pages/Profile.jsx
+// Profile & Settings Page — orchestrates all sections
+// Navbar + Footer come from AppLayout (nested route)
+// ─────────────────────────────────────────────
+import "./Styles/Profile.css";
+import ProfileCompletionSection  from "../Components/profile/ProfileCompletionSection";
+import AccountSection            from "../Components/profile/AccountSection";
+import NewsletterProfileSection  from "../Components/profile/NewsletterProfileSection";
+import MailchimpSection          from "../Components/profile/MailchimpSection";
+import InsightsSection           from "../Components/profile/InsightsSection";
+import PrivacySection            from "../Components/profile/PrivacySection";
+import PaymentSection            from "../Components/profile/PaymentSection";
 
 function Profile() {
-  useEffect(() => {
-    // Placeholder side effects can be added later.
-    // Example: fetch profile settings and account data.
-    async function loadProfileData() {
-      await Promise.all([apiGetAccount(), apiGetPrivacy(), apiGetPayment()]);
-    }
-    loadProfileData().catch(() => {
-      // ignore for now
-    });
-  }, []);
-
   return (
-    <div className="profile-page" style={{ padding: "2rem" }}>
-      <h1>Profile & Settings</h1>
-      <p>This page is under construction. Profile settings will appear here once implemented.</p>
+    <div className="profile-page">
+      <div className="profile-container">
+        <ProfileCompletionSection />
+        <AccountSection />
+        <NewsletterProfileSection />
+        <MailchimpSection />
+        <InsightsSection />
+        <PrivacySection />
+        <PaymentSection />
+      </div>
     </div>
   );
 }
