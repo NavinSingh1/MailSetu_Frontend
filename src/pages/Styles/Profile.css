@@ -9,9 +9,10 @@
 }
 
 .profile-container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 125px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -158,16 +159,20 @@
 .profile-more-link button {
   background: none;
   border: none;
-  font-size: 14px;
-  font-weight: 700;
-  color: #111827;
-  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2E2E2E;
+  font-family: 'Trebuchet MS', sans-serif;
   cursor: pointer;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
   text-decoration: none;
 }
 
 .profile-more-link button:hover {
-  text-decoration: underline;
+  background: var(--color-light-gray);
+  color: var(--color-black);
 }
 
 /* ── Skeleton loader ──────────────────────── */
